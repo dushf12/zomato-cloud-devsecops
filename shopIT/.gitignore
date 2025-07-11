@@ -97,4 +97,8 @@ Thumbs.db
 *.temp
 
 # Config files with sensitive data
-config.env 
+config.env
+
+# Cookie files (may contain sensitive tokens)
+cookies.txt
+*.cookies 

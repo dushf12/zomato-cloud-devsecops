@@ -63,17 +63,25 @@ npm install
 ```
 
 3. Set up environment variables
-Create a `config.env` file in the `backend/config/` directory:
+Copy the example configuration file and update it with your values:
+```bash
+cp backend/config/config.env.example backend/config/config.env
+```
+Then edit `backend/config/config.env` with your actual values:
 ```env
-PORT=4000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+PORT=6000
+NODE_ENV=DEVELOPMENT
+DB_LOCAL_URI=mongodb://localhost:27017/shopit
+DB_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key_here
 JWT_EXPIRE=7d
 COOKIE_EXPIRE=7
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_EMAIL=your_email@gmail.com
 SMTP_PASSWORD=your_email_password
+FROM_NAME=ShopIT
+FROM_EMAIL=noreply@shopit.com
 ```
 
 4. Run the development server
