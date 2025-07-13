@@ -30,9 +30,10 @@ console.log('hello');
 //Import all routes
 import productRoutes from "./routes/product.js";
 import authRoutes from "./routes/auth.js";
-
-app.use("/api/v1", productRoutes)
+import orderRoutes from "./routes/order.js";
 app.use("/api/v1", authRoutes)
+app.use("/api/v1", productRoutes)
+app.use("/api/v1", orderRoutes)
 
 // Using error middleware
 app.use(errorMiddleware);
@@ -47,6 +48,8 @@ app.use((err, req, res, next) => {
     }
     next();
 });
+
+
 
 const server = app.listen(process.env.PORT, () => {
     console.log(`Server started on port: ${process.env.PORT} in ${process.env.NODE_ENV} mode`);
