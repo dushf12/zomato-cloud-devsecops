@@ -58,6 +58,7 @@ const orderSchema = new mongoose.Schema({
         }
     ], paymentMethod: {
         type: String,
+        required: [true, "Please select payment method"],
         enum: ["COD", "Online"],
         default: "COD"
     },
@@ -91,6 +92,10 @@ const orderSchema = new mongoose.Schema({
     },
     orderStatus: {
         type: String,
+        enum: {
+            values: ["Processing", "Shipped", "Delivered", "Cancelled"],
+            message: "Please select order status"
+        },
         required: true,
         default: "Processing"
     },

@@ -101,7 +101,7 @@ export default [
     },
     {
       name: "Apple AirPods with Charging Case (Wired)",
-      price: 126.99,
+      price: 126.9,
       description:
         "AirPods with Charging Case: More than 24 hours listening time, up to 18 hours talk time; AirPods (single charge): Up to 5 hours listening time, up to 3 hours talk time or 15 minutes in the case equals up to 3 hours listening time or up to 2 hours talk time.",
       ratings: 4.8,
